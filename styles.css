@@ -14,7 +14,7 @@ h1 {
 }
 
 .cell{
-  font-family: "Permanent Marker", cursive;
+  font-family: monospace;
   width: 120px;
   height: 120px;
   cursor: pointer;
@@ -38,10 +38,3 @@ h1 {
   margin: 80px auto;
 }
 
-@media screen (max-width: 450px){
-  .cell{
-    font-family: sans-serif;
-    width: 200px;
-    height: 200px;
-  }
-}
