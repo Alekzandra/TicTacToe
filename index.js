@@ -9,6 +9,8 @@ const winningConditions = [
 	[2, 4, 6]
 ];
 
+let gameActive = true;
+
 let currentPlayer = "X";
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
@@ -27,7 +29,7 @@ document.querySelector(".restartButton").addEventListener("click", handleGameRes
 function handleCellClick(clickedCellEvent) {
   const clickedCell = clickedCellEvent.target;
   const clickedCellIndex = Number((clickedCellEvent.target).getAttribute("data-cell-index"));
-  if (gameState[clickedCellIndex] !== ""){
+  if (gameState[clickedCellIndex] !== "" || !gameActive){
     return;
   } else {
     handleCellPlayed(clickedCell, clickedCellIndex);
@@ -52,16 +54,19 @@ function handleResultValidation() {
     }
     else if (a === b && b === c) {
       roundWon = true;
-      break
+      break;
     }
   }
   if (roundWon) {
     statusDisplay.innerHTML = winningMessage();
+    gameActive = false;
     return;
   }
   let roundDraw = !gameState.includes("");
   if (roundDraw) {
     statusDisplay.innerHTML = drawMessage();
+    gameActive = false;
+    return;
   }
   handlePlayerChange();
 }
@@ -72,6 +77,7 @@ function handlePlayerChange() {
 }
 
 function handleGameRestart() {
+  gameActive = true;
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
   statusDisplay.innerHTML = currentPlayerTurn();
