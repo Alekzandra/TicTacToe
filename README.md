@@ -12,9 +12,9 @@ I surprised only myself by actually making it work :)
 
 ## Technologies
 Project is created with: 
-* HTML 5
-* CSS 3
-* JavaScript EJ6
+* HTML 
+* CSS 
+* JavaScript 
 
 ## Setup
 * Player X always starts. I know - world is not a fair place. 
