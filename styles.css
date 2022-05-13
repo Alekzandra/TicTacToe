@@ -1,6 +1,6 @@
 body{
   text-align: center;
-  background-color: #F4FCD9;
+  background: #F4FCD9;
 }
 
 h1 {
@@ -12,19 +12,20 @@ h1 {
   display: inline-grid;
   grid-template-columns: repeat(3, auto);
 }
-
 .cell{
-  font-family: "Permanent Marker", cursive;
+  font-family: monospace;
   width: 120px;
   height: 120px;
   cursor: pointer;
   font-size: 3rem;
-  background-color: #61A4BC;
+  background: #61A4BC;
   box-shadow: 0 0 0 1px #333333;
   border: 1px solid #333333;
   line-height: 110px;
 }
-
+.cell:hover{
+  background: #333333;
+}
 .restartButton{
   -webkit-border-radius: 21;
   -moz-border-radius: 21;
@@ -37,8 +38,12 @@ h1 {
   text-decoration: none;
   margin: 80px auto;
 }
+.restartButton:hover{
+  background: #61A4BC;
+  font-weight: 600;
+}
 
-@media screen (max-width: 450px){
+@media(max-width:450px){
   .cell{
     font-family: sans-serif;
     width: 200px;
