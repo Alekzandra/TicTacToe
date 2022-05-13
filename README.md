@@ -18,7 +18,7 @@ Project is created with:
 * CSS 
 * JavaScript 
 
-##Setup
+## Setup
 Game does not require any additional setup. It can be also accessed on: https://alekzandra.github.io/TicTacToe/
 
 
