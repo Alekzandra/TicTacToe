@@ -11,6 +11,7 @@
 I won't surprise anyone with that project - it a simple Tic Tac Toe game and it works exactly like you think it works.  
 I surprised only myself by actually making it work :)  
 Player X always starts. I know - world is not a fair place.  
+Designed for two players.
 
 ## Technologies
 Project is created with: 
